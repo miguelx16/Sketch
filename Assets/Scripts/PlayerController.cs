@@ -6,16 +6,13 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] Transform pablitoTransform;
     Transform objectiveToScale;
-    public float movX, movZ;
-    public float speed;
+    [SerializeField] float gradesMultiply;
+    float movX, movZ;
+    [SerializeField] float speed;
     [SerializeField] Rigidbody rbPablito;
     Vector3 moveInput;
-    public string tag;
-
-    //Data to be saved in gameplay
-    Vector3 originalScale;
-    Vector3 scaledFactor;
-    int chanceToLife = 0;
+    Quaternion rotateInput;
+   
     void Start()
     {
         pablitoTransform = GetComponent<Transform>();
@@ -41,8 +38,11 @@ public class PlayerController : MonoBehaviour
     void ControlMovement()
     {
         moveInput = new Vector3(movX, moveInput.y, movZ);
+        Vector3 directionToMove = rbPablito.rotation * moveInput;
+        rotateInput = Quaternion.Euler(rotateInput.x, movX * gradesMultiply, rotateInput.z);
 
-        rbPablito.MovePosition(rbPablito.position + moveInput.normalized * speed * Time.fixedDeltaTime);
+        rbPablito.MovePosition(rbPablito.position + directionToMove * speed * Time.fixedDeltaTime);
+        rbPablito.MoveRotation(rbPablito.rotation * rotateInput);
 
     }
 }
