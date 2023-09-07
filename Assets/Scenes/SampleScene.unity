@@ -1640,7 +1640,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1805280686}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -2832,7 +2832,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1805280686}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -4066,17 +4066,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797766178}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1805280686 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4802990482394119336, guid: 25b46e3e2aab383459dcc413fc5b8367, type: 3}
+--- !u!1 &1805280684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4918130346487791593, guid: 25b46e3e2aab383459dcc413fc5b8367, type: 3}
   m_PrefabInstance: {fileID: 1853405311}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &1805280689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805280684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7d09dc2e1b176e46bc50f5ff6342391, type: 3}
+  m_Script: {fileID: 11500000, guid: 2448067faf959db4e99db6d2de50693d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pablitoTransform: {fileID: 0}
+  movX: 0
+  movZ: 0
+  speed: 6
+  rbPablito: {fileID: 0}
+  tag: 
 --- !u!1001 &1853405311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4129,10 +4141,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pablito
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4802990482394119336, guid: 25b46e3e2aab383459dcc413fc5b8367, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4918130346487791593, guid: 25b46e3e2aab383459dcc413fc5b8367, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1805280689}
   m_SourcePrefab: {fileID: 100100000, guid: 25b46e3e2aab383459dcc413fc5b8367, type: 3}
 --- !u!1 &1885127246
 GameObject:

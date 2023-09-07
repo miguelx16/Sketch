@@ -93,8 +93,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3891828296667542522}
   - component: {fileID: 865839520576103530}
-  - component: {fileID: 4802990482394119336}
   - component: {fileID: 6207614217252442919}
+  - component: {fileID: 2475006246257801137}
   m_Layer: 6
   m_Name: Pablito
   m_TagString: Untagged
@@ -147,24 +147,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &4802990482394119336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4918130346487791593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7d09dc2e1b176e46bc50f5ff6342391, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pablitoTransform: {fileID: 0}
-  movX: 0
-  movZ: 0
-  speed: 6
-  rbPablito: {fileID: 0}
-  tag: pelota
 --- !u!65 &6207614217252442919
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -186,6 +168,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1048, y: 2.0539718, z: 1.5989536}
   m_Center: {x: 0.0076578856, y: 0.012261629, z: -0.3780442}
+--- !u!114 &2475006246257801137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4918130346487791593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2448067faf959db4e99db6d2de50693d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pablitoTransform: {fileID: 0}
+  movX: 0
+  movZ: 0
+  speed: 6
+  rbPablito: {fileID: 0}
+  tag: 
 --- !u!1 &5411564522031643076
 GameObject:
   m_ObjectHideFlags: 0
