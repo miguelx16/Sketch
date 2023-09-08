@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 45bbcd6bd04aef9458032a37b4372390
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'Hips' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: perry(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere
+      parentName: perry(Clone)
+      position: {x: -0, y: 1.0126306, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 40.991055, y: 84.899315, z: 100}
+    - name: Sphere.001
+      parentName: perry(Clone)
+      position: {x: -0.4230842, y: 1.1410204, z: -0.0012847781}
+      rotation: {x: -0.5154778, y: 0.48402753, z: -0.48402753, w: 0.5154778}
+      scale: {x: 7.250398, y: 18.112118, z: 21.811419}
+    - name: Sphere.002
+      parentName: perry(Clone)
+      position: {x: -0.40339363, y: 1.248425, z: 0.28786862}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 0.83235717, y: 4.7766967, z: 4.7766967}
+    - name: Sphere.003
+      parentName: perry(Clone)
+      position: {x: -0.39929548, y: 1.2464635, z: -0.271154}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 0.83235717, y: 4.7766967, z: 4.7766967}
+    - name: Sphere.004
+      parentName: perry(Clone)
+      position: {x: -0.30668274, y: 0.9091313, z: 0.6354607}
+      rotation: {x: -0.6097863, y: -0.16884328, z: 0.57255524, w: 0.52137625}
+      scale: {x: 29.698713, y: 23.139858, z: 10.295816}
+    - name: Sphere.005
+      parentName: perry(Clone)
+      position: {x: -0.30699027, y: 0.9091313, z: -0.55532926}
+      rotation: {x: -0.1688433, y: 0.6097862, z: -0.52137613, w: 0.57255536}
+      scale: {x: -29.698713, y: -23.139858, z: -10.295816}
+    - name: Sphere.006
+      parentName: perry(Clone)
+      position: {x: 0.8443167, y: 1.0480458, z: 0}
+      rotation: {x: -0.65468997, y: -0.26717234, z: 0.2671723, w: 0.65468997}
+      scale: {x: 51.214542, y: 28.41756, z: 7.097682}
+    - name: Sphere.007
+      parentName: perry(Clone)
+      position: {x: -0.2819957, y: 0.22789162, z: 0.2621939}
+      rotation: {x: -0.65081155, y: 0.27648568, z: -0.27648568, w: 0.65081155}
+      scale: {x: 4.8702273, y: 12.1662445, z: 14.651135}
+    - name: Sphere.008
+      parentName: perry(Clone)
+      position: {x: -0.2819957, y: 0.22789162, z: -0.21640113}
+      rotation: {x: -0.65081155, y: 0.27648568, z: -0.27648568, w: 0.65081155}
+      scale: {x: 4.8702273, y: 12.1662445, z: 14.651135}
+    - name: Sphere.009
+      parentName: perry(Clone)
+      position: {x: -0.13175151, y: 1.8299013, z: 0.003396988}
+      rotation: {x: -0.5270446, y: -0.47419906, z: -0.4556198, w: 0.5383028}
+      scale: {x: 25.593615, y: 15.16758, z: 12.064004}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
