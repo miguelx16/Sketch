@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Rigidbody rbPablito;
     Vector3 moveInput;
     Quaternion rotateInput;
+
+    [SerializeField] GameObject lintern;
+    [SerializeField] bool linternOn = true;
    
     void Start()
     {
@@ -24,6 +27,11 @@ public class PlayerController : MonoBehaviour
     {
         movX = Input.GetAxis("Horizontal");
         movZ = Input.GetAxis("Vertical");
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            linternOn = !linternOn;
+            lintern.SetActive(linternOn);
+        }
 
     }
     private void FixedUpdate()
