@@ -39,11 +39,12 @@ public class PlayerController : MonoBehaviour
             isSliding = true;
             StartCoroutine(SlidingCoroutine());
         }
+
     }
     private void FixedUpdate()
     {
 
-        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical") && !isSliding)
+        if ((Input.GetButton("Horizontal") || Input.GetButton("Vertical")) && !isSliding)
         {
             ControlMovement();
         }
@@ -73,7 +74,7 @@ public class PlayerController : MonoBehaviour
         isSliding = true;
 
         // Apply force to simulate sliding
-        rbPablito.AddForce(transform.forward * slideForce, ForceMode.Impulse);
+        rbPablito.AddForce(transform.forward * (slideForce + speedMultiplier), ForceMode.Impulse);
 
         // Calculate the target rotation
         Quaternion targetRotation = Quaternion.Euler(90f, transform.eulerAngles.y, transform.eulerAngles.z);
@@ -90,6 +91,27 @@ public class PlayerController : MonoBehaviour
 
         transform.rotation = targetRotation; // Ensure the final rotation is exactly 90 degrees.
 
+        // Wait until rb.velocity is nearly zero
+        while (isSliding && rbPablito.velocity.magnitude > 0.1f)
+        {
+            yield return null;
+        }
+
+        // Rotate back to the original rotation
+        Quaternion startRotation = transform.rotation;
+        Quaternion endRotation = Quaternion.Euler(0f, transform.eulerAngles.y, transform.eulerAngles.z);
+        float rotationDuration = 0.3f; // Adjust the duration as needed
+
+        float elapsedTime = 0f;
+        while (elapsedTime < rotationDuration)
+        {
+            transform.rotation = Quaternion.Slerp(startRotation, endRotation, elapsedTime / rotationDuration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        // Ensure the final rotation is exactly back to the original rotation
+        transform.rotation = endRotation;
         isSliding = false;
     }
 }
