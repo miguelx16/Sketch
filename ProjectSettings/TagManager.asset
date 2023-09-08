@@ -6,6 +6,7 @@ TagManager:
   tags:
   - pelota
   - Obstacle
+  - Coin
   layers:
   - Default
   - TransparentFX
