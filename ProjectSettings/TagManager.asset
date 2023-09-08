@@ -6,6 +6,7 @@ TagManager:
   tags:
   - pelota
   - Obstacle
+  - Floor
   layers:
   - Default
   - TransparentFX

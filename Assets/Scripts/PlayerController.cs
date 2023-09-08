@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -13,6 +14,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Rigidbody rbPablito;
     Vector3 moveInput;
     Quaternion rotateInput;
+
+    [Header("Jump Behavior")]
+    [SerializeField] private float jumpForce = 2f;
+    [SerializeField] private float jumpBurst = 8f;
+    private bool onTheFloor = true;
 
     [Header("Slide behavior")]
     [SerializeField] private float slideForce = 10f;
@@ -49,6 +55,11 @@ public class PlayerController : MonoBehaviour
             ControlMovement();
         }
 
+        if (!isSliding && onTheFloor &&  isJumping)
+        {
+            Jumping();
+        }
+
     }
     void ControlMovement()
     {
@@ -66,7 +77,23 @@ public class PlayerController : MonoBehaviour
 
         rbPablito.MovePosition(rbPablito.position + directionToMove * (speed * speedMultiplier)  * Time.fixedDeltaTime);
         rbPablito.MoveRotation(rbPablito.rotation * rotateInput);
+        
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        onTheFloor = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        onTheFloor = false;
+    }
+
+    void Jumping()
+    {
+        rbPablito.AddForce(transform.up * (jumpForce), ForceMode.Impulse);
     }
 
     private IEnumerator SlidingCoroutine()
