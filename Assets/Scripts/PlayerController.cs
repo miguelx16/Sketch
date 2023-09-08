@@ -5,18 +5,22 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] Transform pablitoTransform;
-    Transform objectiveToScale;
     [SerializeField] float gradesMultiply;
     float movX, movZ;
     [SerializeField] float speed;
     [SerializeField] Rigidbody rbPablito;
     Vector3 moveInput;
     Quaternion rotateInput;
+    ItemCollector inventory;
+    [SerializeField] UiFunctions globalFunctions;
+   
    
     void Start()
     {
         pablitoTransform = GetComponent<Transform>();
         rbPablito = GetComponent<Rigidbody>();
+        inventory = GetComponent<ItemCollector>();
+        globalFunctions = FindAnyObjectByType<UiFunctions>();
     }
 
     // Update is called once per frame
@@ -44,5 +48,18 @@ public class PlayerController : MonoBehaviour
         rbPablito.MovePosition(rbPablito.position + directionToMove * speed * Time.fixedDeltaTime);
         rbPablito.MoveRotation(rbPablito.rotation * rotateInput);
 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("ball"))
+        {
+            inventory.ballsCollected += 1;
+            collision.gameObject.SetActive(false);
+        }
+        else if (collision.gameObject.CompareTag("endLevel"))
+        {
+            globalFunctions.ChangeScene("Level2");
+        }
     }
 }
