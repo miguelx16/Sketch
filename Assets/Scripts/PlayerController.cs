@@ -80,11 +80,11 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    IEnumerator Dash()
+    void Dash()
     {
-        canDash = false;
+        
         transform.Translate(Vector3.forward * 8);
-        yield return new WaitForSeconds(3);
-        canDash = true;
+        
+       
     }
 }
