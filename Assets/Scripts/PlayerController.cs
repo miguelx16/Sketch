@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Rigidbody rbPablito;
     Vector3 moveInput;
     Quaternion rotateInput;
+    [Header("shoot info")]
+    [SerializeField] private GameObject bulletPrefab;
+    private bool canSprint = true;
+    private bool canDash = true;
    
     void Start()
     {
@@ -24,6 +28,20 @@ public class PlayerController : MonoBehaviour
     {
         movX = Input.GetAxis("Horizontal");
         movZ = Input.GetAxis("Vertical");
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Shoot();
+        }
+
+        if (Input.GetKeyDown(KeyCode.F) && canSprint){
+            StartCoroutine("Sprint");
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            Dash();
+        }
 
     }
     private void FixedUpdate()
@@ -44,5 +62,29 @@ public class PlayerController : MonoBehaviour
         rbPablito.MovePosition(rbPablito.position + directionToMove * speed * Time.fixedDeltaTime);
         rbPablito.MoveRotation(rbPablito.rotation * rotateInput);
 
+    }
+
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, transform.position, transform.rotation);
+    }
+
+    IEnumerator Sprint()
+    {
+        canSprint = false;
+        float initialSpeed = speed;
+        speed += speed * 2;
+        yield return new WaitForSeconds(3);
+        speed = initialSpeed;
+        canSprint = true;
+    }
+
+
+    IEnumerator Dash()
+    {
+        canDash = false;
+        transform.Translate(Vector3.forward * 8);
+        yield return new WaitForSeconds(3);
+        canDash = true;
     }
 }

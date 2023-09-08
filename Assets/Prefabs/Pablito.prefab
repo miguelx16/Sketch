@@ -184,6 +184,7 @@ MonoBehaviour:
   gradesMultiply: 2.5
   speed: 6
   rbPablito: {fileID: 0}
+  bulletPrefab: {fileID: 1948310131040017141, guid: 1e4ad713fc7580d429269b3c92fe86e6, type: 3}
 --- !u!1 &5411564522031643076
 GameObject:
   m_ObjectHideFlags: 0
