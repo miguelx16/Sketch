@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         pablitoTransform = GetComponent<Transform>();
         rbPablito = GetComponent<Rigidbody>();
+        InvokeRepeating("Lights", 10.0f, 3.5f);
     }
 
     // Update is called once per frame
@@ -29,8 +30,7 @@ public class PlayerController : MonoBehaviour
         movZ = Input.GetAxis("Vertical");
         if(Input.GetKeyDown(KeyCode.F))
         {
-            linternOn = !linternOn;
-            lintern.SetActive(linternOn);
+            Lights();
         }
 
     }
@@ -52,5 +52,10 @@ public class PlayerController : MonoBehaviour
         rbPablito.MovePosition(rbPablito.position + directionToMove * speed * Time.fixedDeltaTime);
         rbPablito.MoveRotation(rbPablito.rotation * rotateInput);
 
+    }
+    void Lights()
+    {
+        linternOn = !linternOn;
+        lintern.SetActive(linternOn);
     }
 }
