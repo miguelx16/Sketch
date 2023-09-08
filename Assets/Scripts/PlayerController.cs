@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     Quaternion rotateInput;
 
     [Header("Slide behavior")]
-    [SerializeField] private float slideForce = 5f;
+    [SerializeField] private float slideForce = 10f;
     [SerializeField] private float slideRotateSpeed = 30f;
     private bool isRunning = false;
     private bool isSliding = false;
