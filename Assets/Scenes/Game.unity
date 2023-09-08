@@ -4967,8 +4967,8 @@ Transform:
   m_GameObject: {fileID: 977965244}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.33, z: -0.59}
-  m_LocalScale: {x: 2, y: 0.04, z: 2}
+  m_LocalPosition: {x: 0, y: -1, z: -0.59}
+  m_LocalScale: {x: 1.5, y: 0.3, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1805280688}
@@ -5045,7 +5045,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977965244}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &980152356
 GameObject:
   m_ObjectHideFlags: 0
@@ -7983,9 +7983,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 50
-  m_Range: 70
-  m_SpotAngle: 40
+  m_Intensity: 60
+  m_Range: 75
+  m_SpotAngle: 95
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -10260,6 +10260,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 865839520576103530, guid: 25b46e3e2aab383459dcc413fc5b8367, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 865839520576103530, guid: 25b46e3e2aab383459dcc413fc5b8367, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475006246257801137, guid: 25b46e3e2aab383459dcc413fc5b8367, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2475006246257801137, guid: 25b46e3e2aab383459dcc413fc5b8367, type: 3}
       propertyPath: lintern
       value: 
