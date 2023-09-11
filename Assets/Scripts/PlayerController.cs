@@ -51,7 +51,8 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("ball"))
         {
             inventory.ballsCollected += 1;
-            Destroy(gameObject);
+            Vector3 randomPos = new Vector3(Random.Range(-10f, 10f), 2, Random.Range(-10f, 10f));
+            collision.gameObject.transform.position = randomPos;
         }
     }
 
